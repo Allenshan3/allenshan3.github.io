@@ -504,3 +504,34 @@ footer a:hover {
 .next-btn { 
     right: 10px; 
 }
+
+
+/* Style the sub-list container */
+.sub-bullet-list {
+  padding-left: 30px;
+  margin-top: 5px;
+  list-style-type: circle; /* This creates the hollow bullet */
+}
+
+/* Make only the hollow bullet point blue */
+.sub-bullet-list li::marker {
+  color: #2196F3; /* This is a standard blue; use your specific hex code if you have one */
+}
+
+/* Ensure no arrows appear */
+.sub-bullet-list li {
+  margin-bottom: 5px;
+  /* If the arrow was a CSS pseudo-element, this line removes it: */
+  list-style-image: none; 
+}
+
+
+/* Remove the global arrow icon specifically for sub-bullets */
+.sub-bullet-list li::before {
+  content: none !important;
+}
+
+/* Ensure the sub-bullet list resets its padding to work with standard markers */
+.sub-bullet-list li {
+  padding-left: 0;
+}
